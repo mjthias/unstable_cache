@@ -31,14 +31,14 @@ export default async function Page({ params }: PageProps) {
             <h2 className="text-lg font-bold">Dog cache info</h2>
             <p>{`Cached at: ${dog.cachedAt.toFixed(0)}`}</p>
             <p>{`Now: ${now.toFixed(0)}`}</p>
-            <p>{`Revalidate in: Only on demand`}</p>
+            <p>{`Revalidate in: ${(dog.cachedAt + slugAsNumber - now).toFixed(0)}`}</p>
           </div>
 
           <div>
             <h2 className="text-lg font-bold">Name cache info</h2>
             <p>{`Cached at: ${name.cachedAt.toFixed(0)}`}</p>
             <p>{`Now: ${now.toFixed(0)}`}</p>
-            <p>{`Revalidate in: Only on demand`}</p>
+            <p>{`Revalidate in: ${(name.cachedAt + slugAsNumber / 2 - now).toFixed(0)}`}</p>
           </div>
 
           <div>
