@@ -6,10 +6,10 @@ export default function Home() {
       <h1 className="text-2xl font-bold">Unstable Cache Demo</h1>
       <p>This is a demo of the unstable cache in Next.js.</p>
       <p>
-        Each subpage (/[slug: number]) will fetch a random dog image as well as a random name from 2 different APIs.{" "}
+        Each subpage (/[slug: number]) will fetch a random dog image as well as a random name from 2 different APIs.
         <br />
-        The dog image is cached for "slug" seconds <br />
-        The name is cached for "slug" / 2 seconds.
+        {"The dog image is cached for 'slug' seconds"} <br />
+        {"The name is cached for 'slug' / 2 seconds"}.
       </p>
 
       <p>To test reusability of cache, each cached dog also exist on /sub/[slug] </p>
