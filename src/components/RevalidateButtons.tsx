@@ -44,17 +44,6 @@ export default function RevalidateButtons({ id }: { id: number | "forever" }) {
             className="bg-black text-white px-2 py-1 rounded-md"
             onClick={async () => {
               "use server";
-              revalidateTag("all");
-            }}
-          >
-            Clear all by tag
-          </button>
-        </li>
-        <li>
-          <button
-            className="bg-black text-white px-2 py-1 rounded-md"
-            onClick={async () => {
-              "use server";
               revalidatePath("/", "layout");
             }}
           >

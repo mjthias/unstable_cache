@@ -22,7 +22,7 @@ export async function loadDog(cacheTime: number | "forever"): Promise<Dog> {
     [`dog-${cacheTime}`],
     {
       revalidate,
-      tags: ["all", `dog-${forever ? "forever" : cacheTime}`],
+      tags: [`dog-${forever ? "forever" : cacheTime}`],
     }
   );
 
