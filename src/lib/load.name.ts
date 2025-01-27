@@ -19,7 +19,7 @@ export async function loadName(cacheTime: number | "forever"): Promise<Name> {
         cachedAt: new Date().getTime() / 1000,
       } satisfies Name;
     },
-    [`dog-${cacheTime}`],
+    [`name-${cacheTime}`],
     {
       revalidate,
       tags: [`name-${forever ? "forever" : cacheTime}`],
